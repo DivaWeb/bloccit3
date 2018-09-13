@@ -12,3 +12,13 @@ describe("routes : static", () => {
     });
   });
 });
+describe("static", () =>{
+  describe("Get /marco" => {
+    it("should return status code 200 and the body should include polo", (done) => {
+      request.get(base, (err, res, body) => {
+        expect(res.statusCode).toBe(200);
+        expect(body).to eq("polo");
+      });
+    });
+  });
+});
