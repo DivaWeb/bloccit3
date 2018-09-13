@@ -14,3 +14,14 @@ describe("routes : static", () => {
     });
   });
 });
+
+describe("routes", () => {
+  describe("GET /about", () =>{
+    it("should return the view and it should have 'About Us' in the body", () => {
+      request.get(base, (err, res, body) => {
+        expect(body)toContain("About Us");
+        done();
+      });
+    });
+  });
+});
